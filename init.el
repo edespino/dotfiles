@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (gradle-mode ack smart-mode-line org-bullets magit zenburn-theme)))
+    (bash-completion groovy-mode ack smart-mode-line org-bullets magit zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
@@ -89,6 +89,8 @@
 (setq cfg-var:packages
       '(
         ack
+        bash-completion
+        groovy-mode
         magit
         org-bullets
         smart-mode-line
@@ -150,8 +152,8 @@
 (setq ediff-diff-options "--text")
 
 (require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map (kbd "C-c l") 'org-store-link)
+(define-key global-map (kbd "C-c a") 'org-agenda)
 (setq org-log-done t)
 
 (require 'org-bullets)
@@ -186,22 +188,16 @@
 
 (global-set-key (kbd "C-c e") 'insert-date)
 
+(setq org-startup-indented t)
 ;; from https://www.emacswiki.org/emacs/InsertDate
 (defun insert-date (prefix)
   "Insert the current date. With prefix-argument, use ISO format. With
    two prefix arguments, write out the day and month name."
   (interactive "P")
   (let ((format (cond
-                 ((not prefix) "%m.%d.%Y")
-                 ((equal prefix '(4)) "%a, %b %d, %Y")
-                 ((equal prefix '(16)) "%a, %b %d, %Y - %H:%M:%S")))
-        (system-time-locale "de_DE"))
+                 ((not prefix) "%a, %b %d, %Y")
+                 ((equal prefix '(4)) "%a, %b %d, %Y - %H:%M:%S")
+                 ((equal prefix '(16)) "%m/%d/%Y"))))
     (insert (format-time-string format))))
-
-;; ======================================================================
-
-(require 'gradle-mode)
-
-(gradle-mode 1)
 
 ;; ======================================================================
