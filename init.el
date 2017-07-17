@@ -25,8 +25,12 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (bash-completion groovy-mode ack smart-mode-line org-bullets magit zenburn-theme)))
+    (shell-pop bash-completion groovy-mode ack smart-mode-line org-bullets magit zenburn-theme)))
  '(select-enable-clipboard t)
+ '(shell-pop-full-span t)
+ '(shell-pop-universal-key "")
+ '(shell-pop-window-position "bottom")
+ '(shell-pop-window-size 50)
  '(suggest-key-bindings nil)
  '(tab-width 4)
  '(transient-mark-mode t)
@@ -56,6 +60,7 @@
 (global-set-key (kbd "C-c b")   'bookmark-jump)
 (global-set-key (kbd "C-c f")   'browse-url-of-dired-file)
 (global-set-key (kbd "C-c t")   'find-file-at-point)
+(global-set-key (kbd "C-c p")   'shell-pop)
 
 (global-set-key (kbd "C-x ,")   'compile)
 
@@ -92,7 +97,8 @@
         bash-completion
         groovy-mode
         magit
-        org-bullets
+        org-bullets    
+        shell-pop
         smart-mode-line
         zenburn-theme
         ))
@@ -201,3 +207,5 @@
     (insert (format-time-string format))))
 
 ;; ======================================================================
+
+(require 'shell-pop)
