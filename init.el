@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (shell-pop bash-completion groovy-mode ack smart-mode-line org-bullets magit zenburn-theme)))
+    (ack bash-completion groovy-mode magit org-bullets shell-pop smart-mode-line xcscope zenburn-theme)))
  '(select-enable-clipboard t)
  '(shell-pop-full-span t)
  '(shell-pop-universal-key "")
@@ -97,9 +97,10 @@
         bash-completion
         groovy-mode
         magit
-        org-bullets    
+        org-bullets
         shell-pop
         smart-mode-line
+        xcscope
         zenburn-theme
         ))
 
@@ -209,3 +210,4 @@
 ;; ======================================================================
 
 (require 'shell-pop)
+(require 'xcscope)
