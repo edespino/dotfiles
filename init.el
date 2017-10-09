@@ -25,12 +25,8 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ack bash-completion groovy-mode magit org-bullets shell-pop smart-mode-line xcscope zenburn-theme)))
+    (yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
  '(select-enable-clipboard t)
- '(shell-pop-full-span t)
- '(shell-pop-universal-key "")
- '(shell-pop-window-position "bottom")
- '(shell-pop-window-size 50)
  '(suggest-key-bindings nil)
  '(tab-width 4)
  '(transient-mark-mode t)
@@ -51,6 +47,28 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; ======================================================================
+;;; This file bootstraps the configuration, which is divided into
+;;; a number of other files.
+
+(let ((minver "24.1"))
+  (when (version< emacs-version minver)
+    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
+(when (version< emacs-version "24.4")
+  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+(defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
+(defconst *is-a-mac* (eq system-type 'darwin))
+
+;;----------------------------------------------------------------------------
+;; Bootstrap config
+;;----------------------------------------------------------------------------
+
+(require 'init-utils)
+(require 'init-elpa)      ;; Machinery for installing required packages
+
+;; ======================================================================
 
 (global-set-key (kbd "C-c d")   'goto-line)
 
@@ -60,7 +78,6 @@
 (global-set-key (kbd "C-c b")   'bookmark-jump)
 (global-set-key (kbd "C-c f")   'browse-url-of-dired-file)
 (global-set-key (kbd "C-c t")   'find-file-at-point)
-(global-set-key (kbd "C-c p")   'shell-pop)
 
 (global-set-key (kbd "C-x ,")   'compile)
 
@@ -95,12 +112,17 @@
       '(
         ack
         bash-completion
+        cmake-mode
+        flycheck
+        flycheck-color-mode-line
         groovy-mode
         magit
+        magit-gh-pulls
+        markdown-mode
         org-bullets
-        shell-pop
+        psvn
         smart-mode-line
-        xcscope
+        yaml-mode
         zenburn-theme
         ))
 
@@ -209,5 +231,22 @@
 
 ;; ======================================================================
 
-(require 'shell-pop)
-(require 'xcscope)
+;;----------------------------------------------------------------------------
+;; Load configs for specific features and modes
+;;----------------------------------------------------------------------------
+
+(require 'init-flycheck)
+
+(when *spell-check-support-enabled*
+  (require 'init-spelling))
+
+(add-hook 'org-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+
+(require 'magit-gh-pulls)
+(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
