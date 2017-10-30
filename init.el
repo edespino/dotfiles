@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
+    (go-mode terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
@@ -115,6 +115,7 @@
         cmake-mode
         flycheck
         flycheck-color-mode-line
+        go-mode
         groovy-mode
         magit
         magit-gh-pulls
