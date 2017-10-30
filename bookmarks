@@ -2,71 +2,24 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("review"
- (filename . "~/gdrive/Documents/Pivotal/1-1/Espino/review.txt")
+(("bbl"
+ (filename . "~/gdrive/notes/bbl.txt")
  (front-context-string . "## =============")
  (rear-context-string)
  (position . 1))
-("info"
- (filename . "~/gdrive/notes/info.txt")
- (front-context-string . "----------------")
+("notes"
+ (filename . "~/gdrive/notes/HAWQ-aws-ccp.txt")
+ (front-context-string . "## =============")
  (rear-context-string)
  (position . 1))
-("git"
- (filename . "~/gdrive/notes/git.txt")
- (front-context-string . "## -------------")
+("nccp"
+ (filename . "~/gdrive/notes/ccp.txt")
+ (front-context-string . "## =============")
  (rear-context-string)
  (position . 1))
-("ah"
- (filename . "~/gdrive/notes/apache-hawq.txt")
- (front-context-string . "Yi Jin +1\nWen Li")
- (rear-context-string . "rowse/HAWQ-1268\n")
- (position . 385))
-("el"
- (filename . "~/.emacs.d/init.el")
- (front-context-string . "(setenv \"TERM\" \"")
- (rear-context-string)
- (position . 1))
-("standup"
- (filename . "~/gdrive/notes/standup.txt")
- (front-context-string . "\n## ------------")
- (rear-context-string . "---------------\n")
- (position . 173))
-("pp"
- (filename . "~/gdrive/notes/pxf-perf.txt")
- (front-context-string . "pulse_trigger.py")
- (rear-context-string . "XF-SystemTest/\n\n")
- (position . 1803))
-("kh"
- (filename . "~/.ssh/known_hosts")
- (front-context-string)
- (rear-context-string . "ao1bJJIwVwgzJ5r\n")
- (position . 598068))
-("hv"
- (filename . "~/workspace/HAWQ/hawq-vault/")
- (front-context-string . "credentials-hawq")
- (rear-context-string . "23 Nov 17 01:38 ")
- (position . 574))
-("hp"
- (filename . "~/workspace/HAWQ/hawq-ci/concourse/pipelines/")
- (front-context-string . "README.md\n  -rw-")
- (rear-context-string . "52 Oct 27 16:43 ")
- (position . 267))
-("c7"
- (filename .
-           #("/ssh:centos@52.9.236.174:/home/centos/" 1 4
-             (tramp-default t)))
- (front-context-string . "..\n  drwxrwxr-x.")
- (rear-context-string . "19 Aug 11 02:39 ")
- (position . 164))
-("pxf"
- (filename . "~/gdrive/notes/pxf.txt")
- (front-context-string . "yum-config-manag")
- (rear-context-string . "--------------\n\n")
- (position . 192))
-("cs"
- (filename . "~/gdrive/notes/concourse-summary.txt")
- (front-context-string . "basic_auth_usern")
+("review"
+ (filename . "~/gdrive/Documents/Pivotal/1-1/Espino/review.txt")
+ (front-context-string . "## =============")
  (rear-context-string)
  (position . 1))
 ("names"
@@ -74,86 +27,14 @@
  (front-context-string . "## -------------")
  (rear-context-string)
  (position . 1))
-("awscli"
- (filename . "~/gdrive/notes/awscli.txt")
- (front-context-string . "aws --profile es")
- (rear-context-string)
- (position . 1))
-("hawq"
- (filename . "~/gdrive/notes/hawq.txt")
- (front-context-string . "ssh root@172.16.")
- (rear-context-string . "--------------\n\n")
- (position . 99751))
-("docker-container-cache"
- (filename . "~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/")
- (front-context-string . "Docker.qcow2\n  -")
- (rear-context-string . "28 Jul 14 14:29 ")
- (position . 302))
-("docker containers"
- (filename . "~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/")
- (front-context-string . "console-ring\n  -")
- (rear-context-string . "36 Jul 11 06:59 ")
- (position . 310))
-("bosh"
- (filename . "~/gdrive/notes/gpdb-bosh.txt")
- (front-context-string . "fly -t hawq logi")
- (rear-context-string . "--------------\n\n")
- (position . 96270))
 ("todo"
  (filename . "~/gdrive/Documents/Pivotal/1-1/Espino/todo.txt")
  (front-context-string . "## -------------")
  (rear-context-string)
  (position . 1))
-("gpdev"
- (filename .
-           #("/ssh:gpdev@192.168.177.135:/home/gpdev/" 1 4
-             (tramp-default t)))
- (front-context-string . "gpdb\n  -rw-r--r-")
- (rear-context-string . "96 Oct 29 03:52 ")
- (position . 796))
-("oss"
- (filename . "~/notes/gpdb-oss.txt")
- (front-context-string . "## -------------")
- (rear-context-string)
- (position . 1))
-("ubuntu"
- (filename . "~/gdrive/notes/ubuntu.txt")
- (front-context-string . "sudo apt-get ins")
- (rear-context-string . "==============\n\n")
- (position . 160))
-("pt"
- (filename . "/var/folders/2f/t42qkxqj6gg6tc9_bdwtb8s40000gp/T/Popcorn-Time/")
- (front-context-string)
- (rear-context-string . "68 Oct  4 14:04 ")
- (position . 347))
 ("1-1"
  (filename . "~/gdrive/Documents/Pivotal/1-1/")
  (front-context-string . "1-1-Template.txt")
  (rear-context-string . "23 Dec 20 00:16 ")
  (position . 252))
-("pdevmain"
- (filename . "/ssh:pdev@pdev:/home/pdev/gitdev/GPDB/main/")
- (front-context-string . ".git\n  -rw-r--r-")
- (rear-context-string . " 0 Jun  4 12:21 ")
- (position . 199))
-("windev"
- (filename . "~/notes/windev.txt")
- (front-context-string . "Windows 8.1 with")
- (rear-context-string)
- (position . 1))
-("docker"
- (filename . "~/gdrive/notes/docker.txt")
- (front-context-string . "## -------------")
- (rear-context-string)
- (position . 1))
-("PAdmin"
- (filename . "/ssh:PAdmin@windev:/home/PAdmin/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "95 Dec  9 19:20 ")
- (position . 193))
-("ccp"
- (filename . "~/gdrive/notes/ccp.txt")
- (front-context-string . "\nfgpd sp -p ccp-")
- (rear-context-string)
- (position . 1))
 )
