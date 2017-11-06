@@ -25,11 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-<<<<<<< HEAD
-    (go-mode terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
-=======
-    (nlinum-hl nlinum-relative terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
->>>>>>> Add nlinum support.
+    (go-mode nlinum-hl nlinum-relative terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
