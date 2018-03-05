@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (go-mode nlinum-hl nlinum-relative terraform-mode yaml-mode markdown-mode magit-gh-pulls psvn ack bash-completion cmake-mode flycheck flycheck-color-mode-line groovy-mode magit org-bullets smart-mode-line zenburn-theme)))
+    (ack ag bash-completion cmake-mode flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
@@ -109,25 +109,7 @@
 (require 'package)
 
 (setq cfg-var:packages
-      '(
-        ack
-        bash-completion
-        cmake-mode
-        flycheck
-        flycheck-color-mode-line
-        go-mode
-        groovy-mode
-        magit
-        magit-gh-pulls
-        markdown-mode
-        nlinum-hl
-        nlinum-relative
-        org-bullets
-        psvn
-        smart-mode-line
-        terraform-mode
-        yaml-mode
-        zenburn-theme
+      '(ack ag bash-completion cmake-mode flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme
         ))
 
 (defun cfg:install-packages ()
@@ -254,12 +236,8 @@
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
-;(require 'nlinum)
-;(setq global-nlinum-mode t)
-;(setq nlinum-format "%d ")
+(require 'hlinum)
+(hlinum-activate)
 
-(add-hook 'prog-mode-hook 'nlinum-relative-mode)
-(setq nlinum-relative-redisplay-delay 0)   ;; delay
-(setq nlinum-relative-current-symbol "->") ;; or "" for display current line number
-(setq nlinum-relative-offset 0)            ;; 1 if you want 0, 2, 3...
-(setq nlinum-format "%d ")
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))

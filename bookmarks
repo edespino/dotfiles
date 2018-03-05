@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("bbl"
+(("cfcr"
+ (filename . "~/workspace/cfcr/")
+ (front-context-string . "..\n  drwxr-xr-x ")
+ (rear-context-string . "92 Jan 25 08:55 ")
+ (position . 196))
+("bbl"
  (filename . "~/gdrive/notes/bbl.txt")
  (front-context-string . "## =============")
  (rear-context-string)
