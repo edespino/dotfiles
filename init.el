@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ack ag bash-completion cmake-mode flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme)))
+    (ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
@@ -109,7 +109,7 @@
 (require 'package)
 
 (setq cfg-var:packages
-      '(ack ag bash-completion cmake-mode flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme
+      '(ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme
         ))
 
 (defun cfg:install-packages ()
@@ -243,3 +243,6 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
 (setq-default comment-start "# ")
+
+(global-set-key (kbd "C-h ,") 'fasd-find-file)
+(global-fasd-mode 1)
