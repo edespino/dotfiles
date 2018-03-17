@@ -239,6 +239,8 @@
 (require 'hlinum)
 (hlinum-activate)
 
+(add-to-list 'auto-mode-alist '("\\.envrc\\'" . shell-script-mode))
+
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
