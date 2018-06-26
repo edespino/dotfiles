@@ -25,7 +25,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (org rg chruby el-spec inf-ruby fzf ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme)))
+    (org rg chruby el-spec inf-ruby fzf ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme)))
  '(select-enable-clipboard t)
  '(suggest-key-bindings nil)
  '(tab-width 4)
@@ -109,7 +109,7 @@
 (require 'package)
 
 (setq cfg-var:packages
-      '(org rg chruby el-spec inf-ruby fzf ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets psvn smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme
+      '(org rg chruby el-spec inf-ruby fzf ack ag bash-completion cmake-mode fasd flycheck flycheck-color-mode-line go-mode groovy-mode hlinum magit magit-gh-pulls markdown-mode org-bullets smart-mode-line terraform-mode web-mode yaml-mode zenburn-theme
         ))
 
 (defun cfg:install-packages ()
