@@ -259,3 +259,10 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
+(fset 'get-dir
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("o<wocd " 0 "%d")) arg)))
+
+(define-key global-map "\C-co" 'get-dir)
+
+(push (cons "\\*shell\\*" display-buffer--same-window-action) display-buffer-alist)
